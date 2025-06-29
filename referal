@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .required::after {
+      content: " *";
+      color: red;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <h2>Candidate Application Form</h2>
+
+    <label class="required">Candidate's Name</label>
+    <input type="text" name="name" required>
+
+    <label class="required">Candidate's Contact Number</label>
+    <input type="tel" name="contact" required>
+
+    <label class="required">Candidate's Email Id</label>
+    <input type="email" name="email" required>
+
+    <label class="required">Resume</label>
+    <input type="file" name="resume[]" multiple accept=".pdf,.doc,.docx" required>
+    <small>Upload up to 5 supported files. Max 10 MB per file.</small>
+
+    <label class="required">Referred For Position</label>
+    <select name="position" required>
+      <option value="">-- Select a Position --</option>
+      <option>Customer Service - Voice</option>
+      <option>Customer Service - Non Voice</option>
+      <option>Email & Chat Process</option>
+      <option>Technical Chat Process</option>
+      <option>Outbound Sales</option>
+      <option>Content Moderation</option>
+      <option>Technical Support</option>
+      <option>Annotation Analyst</option>
+    </select>
+
+    <label class="required">Current Address</label>
+    <textarea name="address" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
